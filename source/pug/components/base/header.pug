@@ -7,11 +7,23 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "About us"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Roadmap"
+      },
+      {
+        href: "#",
+        text: "Documents"
+      },
+      {
+        href: "#",
+        text: "F.A.Q"
+      },
+      {
+        href: "index.html",
+        text: "Buy NFT glasses"
       },
     ]
 
@@ -20,8 +32,10 @@ mixin header(headerMods, currentUrl)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo Логотип
+          +icon("cheelee_logo", 92, 44)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+          +icon("cheelee_logo", 92, 44)
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)

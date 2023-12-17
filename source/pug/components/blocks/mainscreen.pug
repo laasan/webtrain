@@ -1,0 +1,19 @@
+mixin mainscreen()
+  .mainscreen
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      //-p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+
+      //-p(style="margin-top: 40px;") Пример использования +img()
+      //-p(style="margin-bottom: 40px;")
+      .mainscreen__text
+        p GameFi short video
+            span platform
+        span.turquoise Watch. Play. Earn
+
+        .mainscreen__play
+            +icon("google-play_logo", 30, 32)
+            span Pre-registration in Google Play
+      .mainscreen__img
+        +img("content", "mainscreen-img", "png", 1512, 907, "cheelee-girl")
